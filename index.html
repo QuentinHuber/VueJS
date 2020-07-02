@@ -23,10 +23,21 @@
 <body>
   
   <div class="ui inverted fixed menu">
-    <div class="header item">Episode 3</div>
+    <div class="header item">Episode 4</div>
   </div>
   <div class="ui main container" id="app">
-    {{ seconds }}
+    <!--<input type="checkbox" v-model="success">
+    <input type="text" v-model="message">
+    {{ message }}
+    <div class="ui message" :class="cls">
+    Salut les gens
+    </div>-->
+    <p>
+      Prénom : {{ firstname }}<br>
+      Nom : {{ lastname }}<br>
+      <!--Nom complet : {{ fullname }}<br>-->
+      Nom complet : <input type="text" v-model="fullname">
+    </p>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
