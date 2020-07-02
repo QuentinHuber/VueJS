@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    
+  </style>
+
+  <title>Document</title>
+
+  <style>
+
+    .main.container{
+      padding-top: 50px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  
+  <div class="ui inverted fixed menu">
+    <div class="header item">Tuto</div>
+  </div>
+  <div class="ui main container" id="app">
+
+    <input type="checkbox" v-model="cls" :true-value="'success'" :false-value="'error'"> <!-- Dès que la variable change, ca influe le v-model -->
+    
+    <!-- <a href="{{ link }}">{{ message }}</a> -->
+    <!-- <a v-bind:href="link">{{ message }}</a> -->
+    <!-- <a v-bind:href="link + '/tutoriels'">{{ message }}</a> <!-- Ajouter un autre lien -->
+    <a :href="link" :title="message">{{ message }}</a> <!-- Raccourci -->
+    
+    <!-- <ul>
+
+      <li v-for="person in persons">{{ person }}</li> <!-- Créer une variable person pour chaque personne dans persons -->
+    
+    <!-- </ul> -->
+
+    <!-- <div class="ui success message" v-if="success"> <!-- Supprime si c'est en false alors que v-show met un display none -->
+    <!-- <div class="ui message" :class="{success: success, error: !success}"> -->
+    <!-- <div class="ui message" :style="style()"> -->
+    <div class="ui message" :class="cls">
+
+      <i class="close icon" v-on:click="close"></i> <!-- v-on c'est un équivalent addEventListener Raccourci @click="close"-->
+      <!-- <p> GG </p> -->
+      <p> {{ message }} </p>
+    </div>
+    <!-- <div class="ui error message" v-else>
+      
+      <p>RIP</p>
+    
+    </div> -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
